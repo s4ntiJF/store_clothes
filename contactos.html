@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de ropa - RM - Loja</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="barra">
+            <a href="index.html">
+                <img src="img/logo-rm.png" alt="Logotipo tienda de ropa RM" loading="lazy">
+            </a>
+            <div class="navegacion-responsive">
+                <img src="img/barras.svg" alt="navegacion responsive RM" loading="lazy">
+            </div>
+            <div class="buscar-informacion">
+                <input type="search" placeholder="Estoy buscando" class="input-search" onchange="buscar();">
+                <button id="buscar">Buscar</button><br>
+                <div id="panel" class="panel"></div>
+            </div>
+            <a href="contactos.html" class="contactos">Inicio/Registro</a>
+        </div>
+    </header>
+
+    <div class="bg-lightgrey">
+        <nav class="navegacion-principal">
+            <a href="mujeres.html">Mujeres</a>
+            <a href="hombres.html">Hombres</a>
+            <a href="infantil.html">Infantil</a>
+            <a href="calzado.html">Calzado</a>
+            <a href="salud y belleza.html">Salud y Belleza</a>
+            <a href="accesorios.html">Accesorios</a>
+        </nav>
+    </div>
+
+    <main class="seccion-formularios">
+        <div class="formularios">
+            <div class="form-inferior">
+                <form class="formulario">
+                    <h3>Crear una cuenta</h3>
+
+                    <p class="registrarse">Regístrate en nuestra nueva Tienda Online, beneficio exclusivo para clientes de Crédito Directo RM, próximamente podrás 
+                    realizar tus compras con cualquier forma de pago.</p>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido">
+                    </div>
+                    <div class="campo">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" placeholder="10 dígitos" id="cedula">
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Dirección de correo electrónico</label>
+                        <input type="email" id="correo">
+                    </div>
+                    <div class="campo">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="campo">
+                        <label for="confirmarcontraseña">Confirmar contraseña</label>
+                        <input type="password" id="confirmarcontraseña">
+                    </div>
+                    <div class="terminos">
+                        <input type="checkbox">
+                        <p>Confirmo que he leído y acepto los Términos y condiciones</p>
+                    </div>
+                    <input type="submit" value="Registrarse" class="boton-registrarse">
+                </form>
+            </div>
+            <div class="form-inferior">
+                <form class="formulario2">
+                    <h3>Ingresa a tu cuenta</h3>
+                    <p class="cuenta">¿Ya tienes una cuenta? Inicie sesión para recuperar la configuración de su cuenta.</p>
+                    
+                    <div class="campo">
+                        <label for="correo">Dirección de correo electrónico</label>
+                        <input type="email" id="correo">
+                    </div>
+                    <div class="campo">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password">
+                    </div>
+                    <div id="error"></div>
+                    <input type="submit" value="Iniciar sesíon" class="boton-iniciar">
+                </form>
+            </div>
+        </div>
+    </main>
+        
+    <footer class="footer">
+        <div class="light-black">
+            <div class="border">
+                <div class="enlaces-internos">
+                    <div class="enlaces">
+                        <section class="bloque">
+                            <h4 class="bold">Empresa</h4>
+                            <a href="#">Acerca de nosotros</a>
+                            <a href="#">Nuestras tiendas</a>
+                            <a href="#">Políticas de uso</a>
+                            <a href="#">Contáctanos</a>
+                            <a href="#">Trabaja con nosotros</a>
+                        </section>
+                        <section class="bloque">
+                            <h4 class="bold">Información</h4>
+                            <a href="#">Comprobantes electrónicos</a>
+                            <a href="#">Estado de cuenta</a>
+                            <a href="#">Métodos de pago</a>
+                            <a href="#">Métodos de envío</a>
+                            <a href="#">Cambios y devoluciones</a>
+                        </section>
+                        <section class="bloque">
+                            <h4 class="bold">Servicio al cliente:</h4>
+                            <p>02 401 0100</p>
+                            <h4 class="bold">Consulta tu pedido:</h4>
+                            <p>096 297 4444</p>
+                            <h4 class="bold">Email:</h4>
+                            <p>serviciocliente@modarm.com</p>
+                        </section>
+                    </div>
+                    <section class="bloque">
+                        <h4 class="bold">Newsletter:</h4>
+                        <p class="colecciones">Conoce toda la información sobre últimas colecciones, eventos y ofertas. Subscríbete a nuestro newsletter</p>
+                        <div class="flex">
+                            <input type="search" placeholder="Dirección de email" class="campo-search">
+                            <input type="submit" value="Suscribirse" class="boton-suscribirse">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="text-centrado">
+                <p>Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/formularios.js"></script>
+    <script src="js/responsive.js" defer></script>
+    
+    
+</body>
+</html>

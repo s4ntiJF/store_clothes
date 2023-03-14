@@ -15,12 +15,17 @@
             <a href="index.html">
                 <img src="img/logo-rm.png" alt="Logotipo tienda de ropa RM" loading="lazy">
             </a>
-            <input type="search" placeholder="Estoy buscando" class="input-search">
+            <div class="navegacion-responsive">
+                <img src="img/barras.svg" alt="navegacion responsive RM" loading="lazy">
+            </div>
+            <div class="buscar-informacion">
+                <input type="search" placeholder="Estoy buscando" class="input-search" onchange="buscar();">
+                <button id="buscar">Buscar</button><br>
+                <div id="panel" class="panel"></div>
+            </div>
             <a href="contactos.html" class="contactos">Inicio/Registro</a>
         </div>
     </header>
-
-    <!-- navegación principal -->
 
     <div class="bg-lightgrey">
         <nav class="navegacion-principal">
@@ -33,15 +38,14 @@
         </nav>
     </div>
 
-    <!-- contenido principal y adicional -->
-    <div class="contenedor columnas">
+    <div class="columnas">
         <aside class="fondo-aside">
             <div class="border-precio">
-                <h3>Comprar por Precio</h3>
+                <h4>Comprar por Precio</h4>
             </div>
             <p class="precios">$0-$19.99</p>
             <div class="border-talla">
-                <h3 class="titulo-talla">Comprar por talla</h3>
+                <h4 class="titulo-talla">Comprar por talla</h4>
             </div>
             <div class="contenedor-tallas">
                 <div class="talla-higiene">
@@ -49,7 +53,7 @@
                 </div>
             </div>
             <div class="border-color">
-                <h3 class="titulo-compra">Comprar por Color</h3>
+                <h4 class="titulo-compra">Comprar por Color</h4>
             </div>
             <div class="inferior-color">
                 <p class="color">Varios</p>
@@ -62,7 +66,7 @@
 
            <div class="contenedor-faciales">
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto01.html">
                         <img src="img/facial01.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial1.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Mascarilla facial naranja & ácido hialurónico</p>
@@ -70,7 +74,7 @@
                     <p class="facial__precio">$1,99</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto02.html">
                         <img src="img/facial02.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial2.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Mascarilla facial papaya & ácido hialurónico</p>
@@ -78,7 +82,7 @@
                     <p class="facial__precio">$1,99</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto03.html">
                         <img src="img/facial03.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial3.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Limpiador Facil en espuma Nevada 50ml</p>
@@ -86,7 +90,7 @@
                     <p class="facial__precio">$8,39</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto04.html">
                         <img src="img/facial04.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial4.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Suero facial de células madres Nevada 30ml</p>
@@ -94,7 +98,7 @@
                     <p class="facial__precio">$15,87</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto05.html">
                         <img src="img/facial05.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial5.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Crema facial de células madres Nevada 50ml</p>
@@ -102,7 +106,7 @@
                     <p class="facial__precio">$15,87</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto06.html">
                         <img src="img/facial06.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial6.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Desmaquillante de células madres Nevada 150ml</p>
@@ -110,7 +114,7 @@
                     <p class="facial__precio">$9,33</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto07.html">
                         <img src="img/facial07.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial7.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Mascarilla de Barro Marino Nevada</p>
@@ -118,7 +122,7 @@
                     <p class="facial__precio">$10,26</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto08.html">
                         <img src="img/facial08.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial8.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Mascarilla Facial para niñas Minnie Mouse</p>
@@ -126,7 +130,7 @@
                     <p class="facial__precio">$2,50</p>
                 </div> <!-- facial -->
                 <div class="facial">
-                    <a href="#">
+                    <a href="facialproducto09.html">
                         <img src="img/facial09.jpg" alt="faciales RM" loading="lazy">
                         <img src="img/facial9.jpg" alt="faciales RM" loading="lazy" class="facial__color">
                         <p class="facial__texto">Toallitas Desmaquillantes Aloe Vera Nevada</p>
@@ -137,13 +141,10 @@
         </main>
     </div>
 
-        
-
-        
     <footer class="footer">
         <div class="light-black">
             <div class="border">
-                <div class="contenedor enlaces-internos">
+                <div class="enlaces-internos">
                     <div class="enlaces">
                         <section class="bloque">
                             <h4 class="bold">Empresa</h4>
@@ -187,7 +188,7 @@
     </footer>
 
     <script src="js/formularios.js"></script>
-    <script src="js/responsive"></script>
+    <script src="js/responsive.js" defer></script>
     
 </body>
 </html>

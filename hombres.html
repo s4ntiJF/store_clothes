@@ -15,12 +15,17 @@
             <a href="index.html">
                 <img src="img/logo-rm.png" alt="Logotipo tienda de ropa RM" loading="lazy">
             </a>
-            <input type="search" placeholder="Estoy buscando" class="input-search">
+            <div class="navegacion-responsive">
+                <img src="img/barras.svg" alt="navegacion responsive RM" loading="lazy">
+            </div>
+            <div class="buscar-informacion">
+                <input type="search" placeholder="Estoy buscando" class="input-search" onchange="buscar();">
+                <button id="buscar">Buscar</button><br>
+                <div id="panel" class="panel"></div>
+            </div>
             <a href="contactos.html" class="contactos">Inicio/Registro</a>
         </div>
     </header>
-
-    <!-- navegación principal -->
 
     <div class="bg-lightgrey">
         <nav class="navegacion-principal">
@@ -34,14 +39,14 @@
     </div>
 
     <!-- contenido principal y adicional -->
-    <div class="contenedor columnas">
+    <div class="columnas">
         <aside class="fondo-aside">
             <div class="border-precio">
-                <h3>Comprar por Precio</h3>
+                <h4>Comprar por Precio</h4>
             </div>
             <p class="precios">$20 $49.99</p>
             <div class="border-talla">
-                <h3 class="titulo-talla">Comprar por talla</h3>
+                <h4 class="titulo-talla">Comprar por talla</h4>
             </div>
             <div class="contenedor-tallas">
                 <div class="talla">
@@ -94,7 +99,7 @@
                 </div>
             </div>
             <div class="border-color">
-                <h3 class="titulo-compra">Comprar por Color</h3>
+                <h4 class="titulo-compra">Comprar por Color</h4>
             </div>
             <div class="inferior-color">
                 <p class="color">Negro</p>
@@ -137,94 +142,76 @@
 
             <div class="contenedor-camisas">
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre01.html">
                         <img src="img/camisashombre01.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa1-color1.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa Manga Larga motivo cruces</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$16,48</p>
-                        <p><del>$32,95</del></p>
-                    </div>
+                    <p class="camisa__precio">$16,48</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre02.html">
                         <img src="img/camisashombre02.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa2-color2.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa azul marino manga larga</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$16,48</p>
-                        <p><del>$32,95</del></p>
-                    </div>
+                    <p class="camisa__precio">$16,48</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre03.html">
                         <img src="img/camisashombre03.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa3-color03.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa Unicolor Cuello Neru</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$23,06</p>
-                        <p><del>$32,95</del></p>
-                    </div>
+                    <p class="camisa__precio">$23,06</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre04.html">
                         <img src="img/camisashombre04.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa4-color4.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa Manga Larga Paolo Rossi</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$23,06</p>
-                        <p><del>$32,95</del></p>
-                    </div>
+                    <p class="camisa__precio">$23,06</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre05.html">
                         <img src="img/camisashombre05.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa5-color5.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa Azul marino Cuello Mao</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$23,06</p>
-                        <p><del>$32,95</del></p>
-                    </div>
+                    <p class="camisa__precio">$23,06</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre06.html">
                         <img src="img/camisashombre06.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa6-color6.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa con Textura Unicolor</p>
                     </a>
-                    <p class="sin-rebaja">$32,95</p>
+                    <p class="camisa__precio">$32,95</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre07.html">
                         <img src="img/camisashombre07.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa7-color7.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa Mini Prints Blanca</p>
                     </a>
-                    <p class="sin-rebaja">$32,95</p>
+                    <p class="camisa__precio">$32,95</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre08.html">
                         <img src="img/camisashombre08.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa8-color8.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa con Prints Cuello Americano</p>
                     </a>
-                    <p class="sin-rebaja">$32,95</p>
+                    <p class="camisa__precio">$32,95</p>
                 </div> <!-- camisa -->
                 <div class="camisa">
-                    <a href="#">
+                    <a href="camisahombre09.html">
                         <img src="img/camisashombre09.jpg" alt="camisas de hombre RM" loading="lazy">
                         <img src="img/camisa9-color9.jpg" alt="camisas de hombre RM" loading="lazy" class="camisa__color">
                         <p class="camisa__texto">Camisa Llana Manga Larga Unicolor</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$23,06</p>
-                        <p><del>$32,95</del></p>
-                    </div>
+                    <p class="camisa__precio">$23,06</p>
                 </div> <!-- camisa -->
             </div> <!-- contenedor camisas -->
         </main>
@@ -236,7 +223,7 @@
     <footer class="footer">
         <div class="light-black">
             <div class="border">
-                <div class="contenedor enlaces-internos">
+                <div class="enlaces-internos">
                     <div class="enlaces">
                         <section class="bloque">
                             <h4 class="bold">Empresa</h4>
@@ -280,7 +267,7 @@
     </footer>
 
     <script src="js/formularios.js"></script>
-    <script src="js/responsive"></script>
+    <script src="js/responsive.js" defer></script>
     
 </body>
 </html>

@@ -15,12 +15,17 @@
             <a href="index.html">
                 <img src="img/logo-rm.png" alt="Logotipo tienda de ropa RM" loading="lazy">
             </a>
-            <input type="search" placeholder="Estoy buscando" class="input-search">
+            <div class="navegacion-responsive">
+                <img src="img/barras.svg" alt="navegacion responsive RM" loading="lazy">
+            </div>
+            <div class="buscar-informacion">
+                <input type="search" placeholder="Estoy buscando" class="input-search" onchange="buscar();">
+                <button id="buscar">Buscar</button><br>
+                <div id="panel" class="panel"></div>
+            </div>
             <a href="contactos.html" class="contactos">Inicio/Registro</a>
         </div>
     </header>
-
-    <!-- navegación principal -->
 
     <div class="bg-lightgrey">
         <nav class="navegacion-principal">
@@ -34,15 +39,15 @@
     </div>
 
     <!-- contenido principal y adicional -->
-    <div class="contenedor columnas">
+    <div class="columnas">
         <aside class="fondo-aside">
             <div class="border-precio">
-                <h3>Comprar por Precio</h3>
+                <h4>Comprar por Precio</h4>
             </div>
             <p class="precios">$20-$49.99</p>
             <p class="precios">$50-$99.99</p>
             <div class="border-talla">
-                <h3 class="titulo-talla">Comprar por talla</h3>
+                <h4 class="titulo-talla">Comprar por talla</h4>
             </div>
             <div class="contenedor-tallas">
                 <div class="talla">
@@ -62,7 +67,7 @@
                 </div>
             </div>
             <div class="border-color">
-                <h3 class="titulo-compra">Comprar por Color</h3>
+                <h4 class="titulo-compra">Comprar por Color</h4>
             </div>
             <div class="inferior-color">
                 <p class="color">Negro</p>
@@ -90,7 +95,7 @@
 
             <div class="contenedor-calzados">
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado01.html">
                         <img src="img/calzado01.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado1.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Cuadrado con Textura Unicolor</p>
@@ -98,7 +103,7 @@
                     <p class="calzado__precio">$44,90</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado02.html">
                         <img src="img/calzado02.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado2.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Magnolia con Aplique Dorado</p>
@@ -106,7 +111,7 @@
                     <p class="calzado__precio">$44,90</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado03.html">
                         <img src="img/calzado03.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado3.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Cuadrado Cerrado Unicolor</p>
@@ -114,29 +119,23 @@
                     <p class="calzado__precio">$44,90</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado04.html">
                         <img src="img/calzado04.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado4.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Fino de Tiras Bebece</p>
                     </a>
-                    <div class="calzado-precios">
-                        <p class="calzado__precio">$24,94</p>
-                        <p><del>$24,94</del></p>
-                    </div>
+                    <p class="calzado__precio">$24,94</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado05.html">
                         <img src="img/calzado05.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado5.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón en Punta Beige</p>
                     </a>
-                    <div class="calzado-precios">
-                        <p class="calzado__precio">$23,95</p>
-                        <p><del>$47,95</del></p>
-                    </div>
+                    <p class="calzado__precio">$23,95</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado06.html">
                         <img src="img/calzado06.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado6.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Cuadrado Camel</p>
@@ -144,7 +143,7 @@
                     <p class="calzado__precio">$47,90</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado07.html">
                         <img src="img/calzado07.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado7.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Cadenas Beige Bebecce</p>
@@ -152,18 +151,18 @@
                     <p class="calzado__precio">$49,90</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado08.html">
                         <img src="img/calzado08.jpg" alt="calzado RM" loading="lazy">
                         <div class="calzado__colores">
-                            <img src="img/calzado8.jpg" alt="blusas para mujer RM" loading="lazy" class="blusa__color">
-                            <img src="img/calzado8.2.jpg" alt="blusas para mujer RM" loading="lazy" class="blusa__color">
+                            <img src="img/calzado8.jpg" alt="blusas para mujer RM" loading="lazy" class="calzado__color">
+                            <img src="img/calzado8.2.jpg" alt="blusas para mujer RM" loading="lazy" class="calzado__color">
                         </div>
                         <p class="calzado__texto">Tacón en Punta Unicolor Bebece</p>
                     </a>
                     <p class="calzado__precio">$49,90</p>
                 </div> <!-- calzado -->
                 <div class="calzado">
-                    <a href="#">
+                    <a href="productocalzado09.html">
                         <img src="img/calzado09.jpg" alt="calzado RM" loading="lazy">
                         <img src="img/calzado9.jpg" alt="calzado" loading="lazy" class="calzado__color">
                         <p class="calzado__texto">Tacón Fino Camel Bebece</p>
@@ -174,13 +173,10 @@
         </main>
     </div>
 
-        
-
-        
     <footer class="footer">
         <div class="light-black">
             <div class="border">
-                <div class="contenedor enlaces-internos">
+                <div class="enlaces-internos">
                     <div class="enlaces">
                         <section class="bloque">
                             <h4 class="bold">Empresa</h4>
@@ -224,7 +220,7 @@
     </footer>
 
     <script src="js/formularios.js"></script>
-    <script src="js/responsive"></script>
+    <script src="js/responsive.js" defer></script>
     
 </body>
 </html>

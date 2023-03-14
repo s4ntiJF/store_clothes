@@ -15,12 +15,17 @@
             <a href="index.html">
                 <img src="img/logo-rm.png" alt="Logotipo tienda de ropa RM" loading="lazy">
             </a>
-            <input type="search" placeholder="Estoy buscando" class="input-search">
+            <div class="navegacion-responsive">
+                <img src="img/barras.svg" alt="navegacion responsive RM" loading="lazy">
+            </div>
+            <div class="buscar-informacion">
+                <input type="search" placeholder="Estoy buscando" class="input-search" onchange="buscar();">
+                <button id="buscar">Buscar</button><br>
+                <div id="panel" class="panel"></div>
+            </div>
             <a href="contactos.html" class="contactos">Inicio/Registro</a>
         </div>
     </header>
-
-    <!-- navegación principal -->
 
     <div class="bg-lightgrey">
         <nav class="navegacion-principal">
@@ -33,15 +38,14 @@
         </nav>
     </div>
 
-    <!-- contenido principal y adicional -->
-    <div class="contenedor columnas">
+    <div class="columnas">
         <aside class="fondo-aside">
             <div class="border-precio">
-                <h3>Comprar por Precio</h3>
+                <h4>Comprar por Precio</h4>
             </div>
             <p class="precios">$0-$19.99</p>
             <div class="border-talla">
-                <h3 class="titulo-talla">Comprar por talla</h3>
+                <h4 class="titulo-talla">Comprar por talla</h4>
             </div>
             <div class="contenedor-tallas">
                 <div class="talla">
@@ -55,7 +59,7 @@
                 </div>
             </div>
             <div class="border-color">
-                <h3 class="titulo-compra">Comprar por Color</h3>
+                <h4 class="titulo-compra">Comprar por Color</h4>
             </div>
             <div class="inferior-color">
                 <p class="color">Azul</p>
@@ -76,7 +80,7 @@
 
             <div class="contenedor-blusas">
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil01.html">
                         <img src="img/blusas-y-camisetas01.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil1.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Unicolor Super Sweet</p>
@@ -84,7 +88,7 @@
                     <p class="blusa__precio">$9,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil02.html">
                         <img src="img/blusas-y-camisetas02.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil2.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Manga Larga Super Sweet</p>
@@ -92,7 +96,7 @@
                     <p class="blusa__precio">$9,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil03.html">
                         <img src="img/blusas-y-camisetas03.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil3.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Rosada Princess</p>
@@ -100,18 +104,15 @@
                     <p class="blusa__precio">$9,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil04.html">
                         <img src="img/blusas-y-camisetas04.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil4.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Unicornio Manga Larga</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$9,03</p>
-                        <p><del>$12,90</del></p>
-                    </div>
+                    <p class="blusa__precio">$9,03</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil05.html">
                         <img src="img/blusas-y-camisetas05.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil5.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Gato Celeste</p>
@@ -119,7 +120,7 @@
                     <p class="blusa__precio">$14,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil06.html">
                         <img src="img/blusas-y-camisetas06.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil6.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Smile Rosada</p>
@@ -127,7 +128,7 @@
                     <p class="blusa__precio">$12,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil07.html">
                         <img src="img/blusas-y-camisetas07.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil7.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Rosada Arcoíris</p>
@@ -135,7 +136,7 @@
                     <p class="blusa__precio">$12,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil08.html">
                         <img src="img/blusas-y-camisetas08.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil8.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Camiseta Mini Prints con Bolsillo</p>
@@ -143,15 +144,12 @@
                     <p class="blusa__precio">$12,90</p>
                 </div> <!-- blusa -->
                 <div class="blusa">
-                    <a href="#">
+                    <a href="blusainfantil09.html">
                         <img src="img/blusas-y-camisetas09.jpg" alt="blusas y camisetas infantil RM" loading="lazy">
                         <img src="img/infantil9.jpg" alt="blusas y camisetas infantil RM" loading="lazy" class="blusa__color">
                         <p class="blusa__texto">Buzo Azul marino con Vuelos</p>
                     </a>
-                    <div class="camisa-precios">
-                        <p class="camisa__precio">$10,43</p>
-                        <p><del>$14,90</del></p>
-                    </div>
+                    <p class="blusa__precio">$10,43</p>
                 </div> <!-- blusa -->
             </div> <!-- contenedor blusas -->
         </main>
@@ -160,7 +158,7 @@
     <footer class="footer">
         <div class="light-black">
             <div class="border">
-                <div class="contenedor enlaces-internos">
+                <div class="enlaces-internos">
                     <div class="enlaces">
                         <section class="bloque">
                             <h4 class="bold">Empresa</h4>
@@ -204,7 +202,7 @@
     </footer>
 
     <script src="js/formularios.js"></script>
-    <script src="js/responsive"></script>
+    <script src="js/responsive.js" defer></script>
     
 </body>
 </html>

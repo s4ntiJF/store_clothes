@@ -5,6 +5,7 @@
     --gray: #6b6b6b;
     --lightGrey: #cdcdcd;
     --red: #ea0000;
+    --lightRed: #ffc2c2;
 
     --fuentePrincipal: 'Quicksand', sans-serif;
 }
@@ -36,11 +37,11 @@ h2{
 }
 
 h3{
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 
 h4{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 img{
@@ -48,7 +49,11 @@ img{
 }
 
 ul{
-    line-height: 1.8;
+    line-height: 1;
+}
+
+label{
+    font-size: 1.3rem;
 }
 
 .contenedor{
@@ -77,6 +82,32 @@ ul{
     }
 }
 
+@media (min-width:768px){
+    .buscar-informacion{
+        display: flex;
+    }
+}
+
+.buscar-informacion button{
+    background-color: var(--red);
+    border: none;
+    padding: 1rem 3rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.panel{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.texto{
+    color: var(--white);
+}
+
 .input-search{
     width: 50rem;
     padding: 1rem;
@@ -88,11 +119,21 @@ ul{
     color: var(--white);
     text-transform: uppercase;
     padding-right: 3rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .contactos:hover{
     color: var(--red);
+}
+
+@media (min-width:768px){
+    .navegacion-responsive{
+        display: none;
+    }
+}
+
+.navegacion-responsive img{
+    width: 3rem;
 }
 
 /* Navegacion principal */
@@ -101,25 +142,35 @@ ul{
 }
 
 .navegacion-principal{
+    padding-left: 3rem;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .4s ease-in-out, opacity 0.4s linear;
 }
 
 @media (min-width:768px){
     .navegacion-principal{
         flex-direction: row;
-        align-items: center;
+        gap: 3rem;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
 .navegacion-principal a{
     display: block;
     padding: 2rem 0;
-    padding-left: 3rem;
     text-transform: uppercase;
     text-align: center;
     color: var(--black);
     font-size: 1.4rem;
+}
+
+.mostrar{
+    visibility: visible;
+    opacity: 1;
 }
 
 .navegacion-principal a:hover{
@@ -142,9 +193,9 @@ ul{
 }
 
 .regalo{
+    padding-left: 2rem;
     margin-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 
 @media (min-width:768px){
@@ -237,12 +288,16 @@ ul{
     border-bottom: 1px solid var(--gray);
 }
 
+.enlaces-internos{
+    padding-left: 3rem;
+}
+
 @media (min-width:768px){
     .enlaces-internos{
         display: grid;
-        grid-template-columns: 60% 30%;
-        grid-template-areas: "izquierda, contenido";
-        column-gap: 30rem;
+        grid-template-columns: 50% 30%;
+        grid-template-rows: "izquierda, contenido";
+        column-gap: 20rem;
     }
 }
 
@@ -258,6 +313,7 @@ ul{
     color: var(--white);
     text-transform: uppercase;
     font-weight: 400;
+    font-size: 1.4rem;
     margin: 0 0 1rem 0;
 }
 
@@ -280,7 +336,6 @@ ul{
 
 .colecciones{
     line-height: 1.5;
-    max-width: 90rem;
 }
 
 .campo-search{
@@ -300,6 +355,10 @@ ul{
     font-weight: 700;
 }
 
+.boton-suscribirse:hover{
+    cursor: pointer;
+}
+
 .text-centrado p{
     text-align: center;
     color: var(--gray);
@@ -313,41 +372,46 @@ ul{
     }
 }
 
+.columnas{
+    padding-right: 2rem;
+}
+
 @media (min-width:768px){
     .columnas{
         display: grid;
-        grid-template-columns: 30% 80%;
-        grid-template-areas: "izquierda, contenido";
+        grid-template-columns: 20% 78%;
+        grid-template-rows: "izquierda contenido";
         column-gap: 2rem;
     }
 }
 
+.suscribirse{
+    color: var(--white);
+}
+
 /* Informacion adicional */
+.superiores{
+    margin-top: 2rem;
+}
+
 .fondo-aside{
     background-color: var(--white);
-    padding: 2rem;
-    border: 1px solid var(--lightGrey);
-    margin-top: 2rem;
+    padding-left: 3rem;
 }
 
 .border-precio{
     border-bottom: 1px solid var(--lightGrey);
 }
 
-.border-precio h3{
+.border-precio h4{
     margin-bottom: 1rem;
-}
-
-.precios{
-    font-size: 1.2rem;
-    margin: 2rem 0 0 0;
 }
 
 .border-talla{
     border-bottom: 1px solid var(--lightGrey);
 }
 
-.border-talla h3{
+.border-talla h4{
     margin-bottom: 1rem;
 }
 
@@ -363,6 +427,19 @@ ul{
     }
 }
 
+.border-color{
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.border-color h4{
+    margin-bottom: 1rem;
+}
+
+.precios{
+    font-size: 1.2rem;
+    margin: 2rem 0 0 0;
+}
+
 .titulo-talla,
 .titulo-compra{
     margin: 4rem 0 0 0;
@@ -375,14 +452,6 @@ ul{
 
 .talla p{
     margin: 1rem 0 0 0;
-}
-
-.border-color{
-    border-bottom: 1px solid var(--lightGrey);
-}
-
-.border-color h3{
-    margin-bottom: 1rem;
 }
 
 .inferior-color{
@@ -421,12 +490,13 @@ ul{
 }
 
 .blusa{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .blusa__color{
     border-radius: 50%;
     width: 2rem;
+    border: 1px solid var(--gray);
 }
 
 .blusa__color{
@@ -446,12 +516,6 @@ ul{
     font-weight: 300;
     font-size: 2rem;
     margin: 0;
-}
-
-.blusa-precios{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }
 
 .blusa-precios p{
@@ -478,12 +542,13 @@ ul{
 }
 
 .camisa{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .camisa__color{
     border-radius: 50%;
     width: 2rem;
+    border: 1px solid var(--gray);
 }
 
 .camisa__texto{
@@ -493,25 +558,14 @@ ul{
     margin: 0;
 }
 
-.camisa-precios{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 .camisa-precios p{
     margin: 0;
 }
 
 .camisa__precio{
-    color: var(--red);
-    font-weight: 700;
+    font-weight: 300;
     font-size: 2rem;
-}
-
-.sin-rebaja{
     margin: 0;
-    font-size: 2rem;
 }
 
 /* Seccion de calzodo */
@@ -534,12 +588,13 @@ ul{
 }
 
 .calzado{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .calzado__color{
     border-radius: 50%;
     width: 2rem;
+    border: 1px solid var(--gray);
 }
 
 .calzado__texto{
@@ -549,28 +604,15 @@ ul{
     margin: 0;
 }
 
-.calzado__precio{
-    color: var(--black);
-    font-weight: 300;
-    font-size: 2rem;
-    margin: 0;
-}
-
 .calzado__colores{
     display: flex;
     gap: 1rem;
 }
 
-.calzado-precios{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 .calzado__precio{
-    color: var(--red);
-    font-weight: 700;
+    font-weight: 300;
     font-size: 2rem;
+    margin: 0;
 }
 
 .calzado-precios p{
@@ -602,12 +644,13 @@ ul{
 }
 
 .facial{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .facial__color{
     border-radius: 50%;
     width: 2rem;
+    border: 1px solid var(--gray);
 }
 
 .facial__texto{
@@ -624,5 +667,289 @@ ul{
     margin: 0;
 }
 
+/* Seccion de accesorios */
+.titulo-gafas{
+    font-weight: 300;
+    margin: 2rem 0 0 0;
+    text-transform: uppercase;
+}
 
+.contenedor-gafas{
+    margin: 5rem 0 0 0;
+}
+
+@media (min-width:768px){
+    .contenedor-gafas{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+    }
+}
+
+.gafa{
+    margin-bottom: 4rem;
+}
+
+.gafa__color{
+    border-radius: 50%;
+    width: 2rem;
+    border: 1px solid var(--gray);
+}
+
+.gafa__texto{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.gafa__precio{
+    color: var(--black);
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* contenido del producto */
+.superior{
+    margin-top: 2rem;
+}
+
+@media (min-width:768px){
+    .two-columns{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.border-list{
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.border-list ul{
+    margin-bottom: 3rem;
+}
+
+.caracteristicas{
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+
+.id{
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.codigo{
+    font-weight: 700;
+    color: var(--black);
+}
+
+.opciones-talla{
+    margin: 3rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-producto{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.label-superior{
+    margin: 0 0 1rem 0;
+}
+
+.label-inferior{
+    margin: 2rem 0 0 0;
+}
+
+.tallas{
+    background-color: var(--white);
+    border: 1px solid var(--lightGrey);
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.color-producto{
+    border: 1px solid var(--gray);
+}
+
+.servicios-producto{
+    margin: 4rem 0 0 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.precio{
+    margin: 4rem 0 0 0;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.cantidad-articulos{
+    margin: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.menos,
+.mas{
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    border: 3px solid var(--red);
+    text-align: center;
+    color: var(--red);
+}
+
+.menos:hover{
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.mas:hover{
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.numero{
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    border: 1px solid var(--lightGrey);
+    text-align: center;
+}
+
+.agregar{
+    margin-top: 2rem;
+}
+
+.agregar__bolsa{
+    width: 100%;
+    border: 3px solid var(--red);
+    background-color: var(--white);
+    padding: 1rem;
+    color: var(--red);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.agregar__bolsa:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.border-titulo{
+    margin: 1rem 0 0 0;
+}
+
+.titulo{
+    margin: 0;
+}
+
+.colores{
+    display: flex;
+    gap: 2rem;
+}
+
+.titulo-detalles{
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+
+.lista-producto{
+    margin: 0;
+}
+
+/* Formularios */
+.seccion-formularios{
+    margin-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@media (min-width:768px){
+    .formularios{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+    }
+}
+
+.form-inferior{
+    margin-bottom: 2rem;
+}
+
+.registrarse,
+.cuenta{
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.form-inferior h3{
+    margin: 0 0 1rem 0;
+}
+
+.campo{
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.campo input{
+    width: 100%;
+    border: 1px solid var(--lightGrey);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.terminos{
+    display: flex;
+    gap: 1rem;
+}
+
+.terminos p{
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.boton-registrarse{
+    margin-top: 2rem;
+    width: 100%;
+    border: none;
+    background-color: var(--lightRed);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    color: var(--red);
+}
+
+.boton-iniciar{
+    margin-top: 2rem;
+    width: 100%;
+    border: 3px solid var(--red);
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+}
+
+.boton-iniciar:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
 

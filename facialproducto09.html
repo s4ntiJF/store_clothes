@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de ropa - RM - Loja</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="barra">
+            <a href="index.html">
+                <img src="img/logo-rm.png" alt="Logotipo tienda de ropa RM" loading="lazy">
+            </a>
+            <div class="navegacion-responsive">
+                <img src="img/barras.svg" alt="navegacion responsive RM" loading="lazy">
+            </div>
+            <div class="buscar-informacion">
+                <input type="search" placeholder="Estoy buscando" class="input-search" onchange="buscar();">
+                <button id="buscar">Buscar</button><br>
+                <div id="panel" class="panel"></div>
+            </div>
+            <a href="contactos.html" class="contactos">Inicio/Registro</a>
+        </div>
+    </header>
+    
+    <div class="bg-lightgrey">
+        <nav class="navegacion-principal">
+            <a href="mujeres.html">Mujeres</a>
+            <a href="hombres.html">Hombres</a>
+            <a href="infantil.html">Infantil</a>
+            <a href="calzado.html">Calzado</a>
+            <a href="salud y belleza.html">Salud y Belleza</a>
+            <a href="accesorios.html">Accesorios</a>
+        </nav>
+    </div>
+
+    <section class="contenedor superior">
+        <div class="two-columns">
+            <div>
+                <img src="img/facial09.jpg" alt="camisa hombre RM" loading="lazy">
+            </div>
+            <div>
+                <div class="border-list">
+                    <ul class="lista-producto">
+                        <h4 class="titulo-detalles">Detalles del producto</h4>
+                        <li><p class="caracteristicas">Toallitas desmaquillantes</p></li>
+                        <li><p class="caracteristicas">Contiene 30 unidades</p></li>
+                        <li><p class="caracteristicas">Hipo alergénica</p></li>
+                        <li><p class="caracteristicas">Nutrición</p></li>
+                        <li><p class="caracteristicas">Brillo Natural</p></li>
+                        <li><p class="caracteristicas">Para pieles sensibles</p></li>
+                    </ul>
+                </div>
+                <div class="border-titulo">
+                    <h3 class="titulo">Toallitas Desmaquillantes Aloe Vera Nevada</h3>
+                </div>
+                <p class="id">id <span class="codigo">005000000940428001</span></p>
+                <div class="opciones-talla">
+                    <label for="talla" class="label-producto label-superior">Talla</label>
+                    <select class="tallas" onchange="pulsar();">
+                        <option value="talla unica">TALLA UNICA</option>
+                    </select>
+                    <label for="color" class="label-producto label-inferior">Color</label>
+                    <div id="talla-seleccionada"></div>
+                </div>
+                <a href="facialproducto09.html"><img src="img/facial9.jpg" alt="facial producto RM" loading="lazy" class="color-producto"></a>
+                <div class="servicios-producto">
+                    <p>Guía de cambios y devoluciones</p>
+                    <p>Métodos de envío</p>
+                </div>
+                <p class="precio">$3,99</p>
+                <div class="cantidad-articulos">
+                    <span class="menos">-</span>
+                    <span class="numero">1</span>
+                    <span class="mas">+</span>
+                </div>
+                <div class="agregar">
+                    <input type="submit" value="Agregar a la bolsa" class="agregar__bolsa" onclick="agregarAlerta();">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="light-black">
+            <div class="border">
+                <div class="enlaces-internos">
+                    <div class="enlaces">
+                        <section class="bloque">
+                            <h4 class="bold">Empresa</h4>
+                            <a href="#">Acerca de nosotros</a>
+                            <a href="#">Nuestras tiendas</a>
+                            <a href="#">Políticas de uso</a>
+                            <a href="#">Contáctanos</a>
+                            <a href="#">Trabaja con nosotros</a>
+                        </section>
+                        <section class="bloque">
+                            <h4 class="bold">Información</h4>
+                            <a href="#">Comprobantes electrónicos</a>
+                            <a href="#">Estado de cuenta</a>
+                            <a href="#">Métodos de pago</a>
+                            <a href="#">Métodos de envío</a>
+                            <a href="#">Cambios y devoluciones</a>
+                        </section>
+                        <section class="bloque">
+                            <h4 class="bold">Servicio al cliente:</h4>
+                            <p>02 401 0100</p>
+                            <h4 class="bold">Consulta tu pedido:</h4>
+                            <p>096 297 4444</p>
+                            <h4 class="bold">Email:</h4>
+                            <p>serviciocliente@modarm.com</p>
+                        </section>
+                    </div>
+                    <section class="bloque">
+                        <h4 class="bold">Newsletter:</h4>
+                        <p class="colecciones">Conoce toda la información sobre últimas colecciones, eventos y ofertas. Subscríbete a nuestro newsletter</p>
+                        <div class="flex">
+                            <input type="search" placeholder="Dirección de email" class="campo-search">
+                            <input type="submit" value="Suscribirse" class="boton-suscribirse">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="text-centrado">
+                <p>Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/formularios.js"></script>
+    <script src="js/responsive.js" defer></script>
+    
+</body>
+</html>
